@@ -195,7 +195,7 @@ echo simbio_form_element::dateField('untilDate', date('Y-m-d'));
             $_buffer .= '<tr>';
             $_buffer .= '<td valign="top" width="10%">' . $ovd_title_d['item_code'] . '</td>';
             $_buffer .= '<td valign="top" width="40%">' . $ovd_title_d['title'] . '<div>' . __('Price') . ': ' . $ovd_title_d['price'] . ' ' . $ovd_title_d['price_currency'] . '</div></td>';
-            $_buffer .= '<td width="20%">' . __('Overdue') . ': ' . ($circulation->countOverdueValue($ovd_title_d['loan_id'], date('Y-m-d')))['days'] . ' ' . __('day(s)') . '</td>';
+            $_buffer .= '<td width="20%">' . __('Overdue') . ': ' . ($circulation->countOverdueValue($ovd_title_d['loan_id'])). date('Y-m-d')['days'] . ' ' . __('day(s)') . '</td>';
             $_buffer .= '<td width="30%">' . __('Loan Date') . ': ' . $ovd_title_d['loan_date'] . ' &nbsp; ' . __('Due Date') . ': ' . $ovd_title_d['due_date'] . '</td>';
             $_buffer .= '</tr>';
         }
